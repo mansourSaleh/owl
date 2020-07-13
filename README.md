@@ -17,7 +17,7 @@
 Clone the repo.
 
 ```sh
-$ cd sginup
+$ cd wol
 $ npm install 
 $ expo r
 ```
