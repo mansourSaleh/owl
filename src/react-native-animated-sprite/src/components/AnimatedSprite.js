@@ -1,6 +1,6 @@
 "use strict";
 
-import React from 'react';
+import React from './node_modules/react';
 import {
   Animated,
   PanResponder,
@@ -8,11 +8,11 @@ import {
   Image,
 } from 'react-native';
 
-import PropTypes from 'prop-types';
+import PropTypes from './node_modules/prop-types';
 
-import shallowCompare from 'react-addons-shallow-compare';
-import _ from 'lodash';
-import randomstring from 'random-string';
+import shallowCompare from './node_modules/react-addons-shallow-compare';
+import _ from './node_modules/lodash';
+import randomstring from './node_modules/random-string';
 
 import Tweens from "../Tweens/Tweens";
 
@@ -25,6 +25,7 @@ class AnimatedSprite extends React.Component {
       left: new Animated.Value(props.coordinates.left),
       scale: new Animated.Value(1),
       opacity: new Animated.Value(props.opacity),
+      rotation: new Animated.Value(props.rotation),
       width: props.size.width,
       height: props.size.height,
       rotate: props.rotate,
@@ -55,6 +56,7 @@ class AnimatedSprite extends React.Component {
       left: this.state.left,
       scale: this.state.scale,
       opacity: this.state.opacity,
+      rotation: this.state.rotation
     };
     this.startAnimation();
     // part of PanResponder and drag behavior

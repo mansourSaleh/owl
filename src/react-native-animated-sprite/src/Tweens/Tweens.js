@@ -486,7 +486,7 @@ const spin = {
         toValue: 100,
         easing: Easing.linear,
         duration: options.duration,
-        useNativeDriver: false
+        useNativeDriver: true
       }
     ).start(() => {
       if (options.loop === false) {
